@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-display: "Syne", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: #050505;
+    color: #e2e8f0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, #a78bfa 45%, transparent);
+    color: white;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #c4b5fd 0%, #e879f9 45%, #a78bfa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .glass-hover:hover {
+    background: rgba(255, 255, 255, 0.055);
+    border-color: rgba(255, 255, 255, 0.14);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+::-webkit-scrollbar-thumb {
+  background: #4c1d95;
+  border-radius: 4px;
+}
+
+/* Acessibilidade: letras grandes (botão A+ no topo) */
+html.a11y-large {
+  font-size: 118%;
+}
+html.a11y-large body {
+  line-height: 1.65;
+}
+html.a11y-large .text-xs {
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+}
+html.a11y-large .text-sm {
+  font-size: 1.05rem !important;
+  line-height: 1.55 !important;
+}
+@media (min-width: 640px) {
+  html.a11y-large {
+    font-size: 125%;
+  }
+}
