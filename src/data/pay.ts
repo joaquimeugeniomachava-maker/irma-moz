@@ -12,8 +12,8 @@ export const PAY = {
   /** Pagamento M-Pesa e e-Mola (mesmo número na Carta) */
   mpesa: {
     label: "M-Pesa",
-    number: "870488008",
-    display: "+258 87 048 8008",
+    number: "844898420",
+    display: "+258 84 489 8420",
   },
   emola: {
     label: "e-Mola",
